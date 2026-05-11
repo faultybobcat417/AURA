@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  aura-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Mock API server for development
+  aura-mock-api:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./mock-api:/app
+      - /app/node_modules
+    ports:
+      - "8000:8000"
+    command: sh -c "npm install -g json-server && json-server --watch db.json --port 8000 --host 0.0.0.0"
+    restart: unless-stopped

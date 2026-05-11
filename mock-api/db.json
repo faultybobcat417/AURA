@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "modality": "Multimodal",
+      "useCases": ["General", "Enterprise", "Creative"],
+      "costPer1MInput": 2.50,
+      "costPer1MOutput": 10.00,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5,
+      "effectiveCostPer1M": 4.20,
+      "latencyP50": 145,
+      "latencyP99": 620,
+      "ttft": 320,
+      "tps": 85,
+      "benchmarkScore": 88.7,
+      "uem": 18.42,
+      "change24h": -2.3,
+      "status": "operational",
+      "releaseDate": "2024-05-13",
+      "contextWindow": 128000
+    }
+  ],
+  "providers": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "status": "operational",
+      "uptime24h": 99.98,
+      "latencyTrend": "flat"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "1",
+      "type": "price_drop",
+      "title": "GPT-4o Mini price drop detected (-12%)",
+      "description": "OpenAI reduced output token pricing for GPT-4o Mini effective immediately.",
+      "timestamp": "2025-02-10T14:23:00Z"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "mmlu",
+      "name": "MMLU",
+      "description": "Massive Multitask Language Understanding",
+      "contaminationRisk": "medium",
+      "lastUpdated": "2025-01-15"
+    }
+  ]
+}
