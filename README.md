@@ -1,5 +1,10 @@
 # AURA — AI Model Price Discovery Terminal
 
+
+![AURA Dashboard](aura-dashboard.png)
+![Cost Calculator](aura-cost-calculator.png)
+![Provider Health](aura-provider-health.png)
+![Watchlist](aura-watchlist.png)
 > The definitive price discovery and comparison terminal for the AI model economy. Institutional-grade credibility meets consumer-grade accessibility.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
